@@ -3,16 +3,16 @@ kind: Deployment
 metadata:
   name: mongo-express
   labels:
-    app: {{ .values.mongoexpress.appName }}
+    app: {{ .Values.mongoexpress.appName }}
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: {{ .values.mongoexpress.appName }}
+      app: {{ .Values.mongoexpress.appName }}
   template:
     metadata:
       labels:
-        app: {{ .values.mongoexpress.appName }}
+        app: {{ .Values.mongoexpress.appName }}
     spec:
       containers:
       - name: mongo-express
@@ -52,7 +52,7 @@ metadata:
   name: mongo-express-service
 spec:
   selector:
-    app: {{ .values.mongoexpress.appName }}
+    app: {{ .Values.mongoexpress.appName }}
   #type: LoadBalancer
   ports:
     - protocol: TCP

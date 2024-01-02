@@ -3,6 +3,3 @@ mongodb:
 
 mongoexpress:
   appName: mongo-express
-
-
-{{ .values.mongodb-deployment.appName}}

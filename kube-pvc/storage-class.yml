@@ -1,0 +1,8 @@
+apiVersion: storage.k8s.io
+kind: StorageClass
+metadata:
+  namespace: storage
+  name: efs
+provisioner: efs-storage
+parameters:
+  archiveOnDelete: " false"

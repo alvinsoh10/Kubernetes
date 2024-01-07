@@ -1,0 +1,5 @@
+mongodb:
+  appName: mongodb
+
+mongoexpress:
+  appName: mongo-express

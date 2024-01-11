@@ -2,7 +2,7 @@ apiVersion: eksctl.io/v1alpha5
 kind: ClusterConfig
 
 metadata:
-  name: alvin-cluster
+  name: eks-cluster-eksctl
   region: ap-southeast-1
 
 vpc:
@@ -18,3 +18,4 @@ nodeGroups:
   - name: ng-1
     instanceType: t3.small
     desiredCapacity: 2
+    privateNetworking: true

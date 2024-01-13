@@ -15,7 +15,7 @@ vpc:
         id: "subnet-09068bafbe851e5a9"
 
 managedNodeGroups:
-  - name: ng-1
+  - name: managed-ng-1
     instanceType: t3.medium
     minSize: 1
     maxSize: 2

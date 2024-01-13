@@ -14,8 +14,10 @@ vpc:
       ap-southeast-1b:
         id: "subnet-09068bafbe851e5a9"
 
-nodeGroups:
+managedNodeGroups:
   - name: ng-1
-    instanceType: t3.small
+    instanceType: t3.medium
+    minSize: 1
+    maxSize: 2
     desiredCapacity: 2
     privateNetworking: true

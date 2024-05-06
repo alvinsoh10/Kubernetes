@@ -1,0 +1,15 @@
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+metadata:
+  name: fargate-cluster  # Name of the EKS Cluster
+  region: ap-southeast-1
+fargateProfiles:
+  - name: fp-app
+    selectors:
+      # All workloads in the "ns-app2" Kubernetes namespace will be
+      # scheduled onto Fargate:      
+      - namespace: golang
+      - namespace: fargate-container-insights
+      - namespace: default
+      - namespace: kube-system
+  
